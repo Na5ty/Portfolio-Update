@@ -1,3 +1,12 @@
+/* About.css */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .about-container {
   padding: 40px;
   font-family: "Play", sans-serif;
@@ -5,6 +14,8 @@
   background-color: #121212;
   color: #e0e0e0;
   width: 100vw;
+  box-sizing: border-box;
+  margin-top: 200px;
 }
 
 .about-header {
@@ -55,4 +66,22 @@
   color: #e0e0e0;
   margin: 0;
   font-weight: 400;
+}
+
+.about-education,
+.about-hobbies {
+  margin-top: 40px;
+}
+
+.about-education h2,
+.about-hobbies h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.about-education p,
+.about-hobbies p {
+  font-size: 1rem;
+  color: #b0b0b0;
 }

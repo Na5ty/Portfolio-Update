@@ -14,9 +14,11 @@ const About = () => {
     <div className="about-container">
       <h1 className="about-header">About Me</h1>
       <p className="about-description">
-        I'm a web developer with expertise in modern JavaScript frameworks and
-        technologies. Here are some of the tools and technologies I'm proficient
-        with:
+        I'm Thomas Zeides, a passionate web developer specializing in modern
+        JavaScript frameworks and technologies. My journey into web development
+        began with a fascination for how websites work, and it has grown into a
+        fulfilling career. I am excited about crafting dynamic and interactive
+        web applications.
       </p>
       <section className="skills">
         <div className="skill-item">
@@ -51,6 +53,23 @@ const About = () => {
           <img src={gitIcon} alt="Git" className="skill-icon" />
           <p>Git</p>
         </div>
+      </section>
+      <section className="about-education">
+        <h2>Education & Learning</h2>
+        <p>
+          I have completed a comprehensive web development course at DCI, which
+          provided me with a strong foundation in modern web technologies and
+          best practices. I am committed to continuous learning and staying
+          updated with the latest trends in web development.
+        </p>
+      </section>
+      <section className="about-hobbies">
+        <h2>Hobbies & Interests</h2>
+        <p>
+          Outside of web development, I enjoy exploring new technologies,
+          contributing to open-source projects, and indulging in photography to
+          capture beautiful moments during my travels.
+        </p>
       </section>
     </div>
   );

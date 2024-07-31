@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Projects.css";
 
 const Projects = () => {
@@ -6,15 +7,17 @@ const Projects = () => {
       title: "Portfolio Website",
       description:
         "A personal portfolio website built with React and styled-components.",
-      link: "https://your-portfolio-link.com",
+      link: "/", // Link to the home page
+      internal: true, // Indicates this link is internal
     },
     {
-      title: "E-commerce Platform",
+      title: "Burger Shop E-commerce Platform",
       description:
-        "A full-featured e-commerce platform built with React and Node.js.",
-      link: "https://your-ecommerce-link.com",
+        "An e-commerce platform for a burger shop, featuring product listings, and a user-friendly interface built with React and Node.js.",
+      link: "https://burger-shop-5378ezzpg-na5ty.vercel.app/",
+      internal: false, // Indicates this link is external
     },
-    // Add more projects
+    // Add more projects as needed
   ];
 
   return (
@@ -25,14 +28,20 @@ const Projects = () => {
           <div className="project-card" key={index}>
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              View Project
-            </a>
+            {project.internal ? (
+              <Link to={project.link} className="project-link">
+                View Project
+              </Link>
+            ) : (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                View Project
+              </a>
+            )}
           </div>
         ))}
       </div>
