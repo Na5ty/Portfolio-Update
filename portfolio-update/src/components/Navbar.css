@@ -1,0 +1,51 @@
+.navbar {
+  font-family: "Silkscreen", sans-serif;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #333;
+  color: #fff;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar ul li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+  opacity: 1;
+}
