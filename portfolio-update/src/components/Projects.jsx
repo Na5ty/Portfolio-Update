@@ -14,7 +14,7 @@ const Projects = () => {
       title: "Burger Shop E-commerce Platform",
       description:
         "An e-commerce platform for a burger shop, featuring product listings, and a user-friendly interface built with React and Node.js.",
-      link: "https://burger-shop-5378ezzpg-na5ty.vercel.app/",
+      link: "https://burger-shot-delta.vercel.app/",
       internal: false, // Indicates this link is external
     },
     // Add more projects as needed
