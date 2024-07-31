@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "emailjs-com"; // Import EmailJS SDK
 import "./Contact.css";
 
 const Contact = () => {
@@ -25,10 +25,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_q6at0il",
-        "template_t2suvcl",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         e.target,
-        "ZINgsAAYZbMr1CxrZ"
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then(
         (result) => {
