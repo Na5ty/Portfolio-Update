@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com"; // Import EmailJS SDK
+import emailjs from "emailjs-com";
 import "./Contact.css";
 
 const Contact = () => {
@@ -19,29 +19,27 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    emailjs
-      .sendForm(
+    try {
+      await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         e.target,
         import.meta.env.VITE_EMAILJS_USER_ID
-      )
-
-      .then(
-        (result) => {
-          setIsSubmitting(false);
-          setStatusMessage("Your message has been sent successfully!");
-          setFormData({ name: "", email: "", message: "" });
-        },
-        (error) => {
-          setIsSubmitting(false);
-          setStatusMessage("There was an error sending your message.");
-        }
       );
+      setStatusMessage("Your message has been sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setStatusMessage(
+        "There was an error sending your message. Please try again later."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
