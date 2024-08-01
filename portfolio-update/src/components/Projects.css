@@ -9,10 +9,6 @@
   box-sizing: border-box;
 }
 
-.projects-heading {
-  margin-top: 40px;
-}
-
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
