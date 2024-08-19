@@ -1,3 +1,5 @@
+/* project.css */
+
 .projects-container {
   padding: 20px;
   min-height: 100vh;
@@ -50,4 +52,50 @@
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+/* Adjusted modal styles */
+/* Darker modal background */
+.modal-content-custom {
+  background: #1a1a1a; /* Dark grey background */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 0; /* Remove padding */
+}
+
+/* Ensure modal has no white space */
+.modal-body {
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+  background-color: #1a1a1a; /* Match background color */
+}
+
+/* Maximize image size within the modal */
+.modal-image {
+  width: 100%;
+  max-width: 95vw; /* Make image responsive to viewport width */
+  max-height: 90vh; /* Limit image height to 90% of viewport height */
+  object-fit: contain; /* Keep aspect ratio */
+}
+
+/* Custom modal footer styles */
+.modal-footer {
+  border-top: none; /* Remove top border */
+  justify-content: center; /* Center the button */
+  background-color: #1a1a1a; /* Match footer background color */
+}
+
+/* Custom close button style */
+.modal-footer .btn-secondary {
+  background-color: #444; /* Dark grey button */
+  border: none;
 }

@@ -1,12 +1,12 @@
-.about-container {
-  padding: 40px;
+About.css .about-container {
+  margin-top: 80px; /* Ensure consistent margin to prevent overlap with navbar */
   font-family: "Play", sans-serif;
   text-align: center;
   background-color: #121212;
   color: #e0e0e0;
   width: 100vw;
+  padding: 20px; /* Add padding to prevent content from touching the sides */
   box-sizing: border-box;
-  margin-top: 500px;
 }
 
 .about-header {
@@ -75,4 +75,10 @@
 .about-hobbies p {
   font-size: 1rem;
   color: #b0b0b0;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    margin-top: 60px; /* Adjust margin for smaller screens */
+  }
 }

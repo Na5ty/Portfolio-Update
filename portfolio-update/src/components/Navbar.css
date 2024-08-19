@@ -1,38 +1,49 @@
+/* Navbar.css */
+
 .navbar {
-  font-family: "Silkscreen", sans-serif;
-  font-size: 1.5rem;
-  position: fixed;
+  font-family: "Silkscreen", sans-serif; /* Restore the original font */
+  font-size: 1.8rem; /* Slightly reduced font size for a better fit */
+  position: fixed; /* Fixed positioning to stay in place */
   top: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: #333;
-  color: #fff;
-  z-index: 1000;
+  background-color: #333; /* Navbar background color */
+  color: #fff; /* Text color */
+  z-index: 1000; /* Ensure it stays above other content */
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 80px; /* Ensure a fixed height to center items vertically */
+  padding: 0 2rem; /* Horizontal padding */
 }
 
+/* Navbar list styling */
 .navbar ul {
   list-style: none;
-  display: flex;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height to align items vertically */
 }
 
+/* Navbar list items */
 .navbar ul li {
-  margin: 0 1.5rem;
-  position: relative;
+  margin: 0 1.5rem; /* Space between items */
 }
 
+/* Navbar links */
 .navbar ul li a {
   text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  transition: color 0.3s ease;
+  color: #fff; /* Text color */
+  font-weight: 700; /* Font weight */
+  transition: color 0.3s ease, transform 0.3s ease;
   position: relative;
+  font-size: 1.8rem; /* Adjusted font size for better fit */
 }
 
+/* Navbar link underline effect */
 .navbar ul li a::after {
   content: "";
   display: block;
@@ -41,33 +52,41 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff; /* Underline color */
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
+/* Hover effect for navbar links */
 .navbar ul li a:hover::after {
   opacity: 1;
 }
 
-/* Hamburger Menu for Mobile */
+/* Hover effect for navbar links */
+.navbar ul li a:hover {
+  color: #ff9800; /* Change color on hover */
+  transform: translateY(-3px); /* Slightly raise the link */
+}
+
+/* Hamburger menu styles for mobile */
 .navbar .hamburger {
-  display: none;
+  display: none; /* Hide by default */
   flex-direction: column;
   cursor: pointer;
+  z-index: 1010; /* Ensure it stays above the navbar */
 }
 
 .navbar .hamburger div {
-  width: 25px;
-  height: 3px;
+  width: 30px; /* Increase width for hamburger lines */
+  height: 3px; /* Adjust height for hamburger lines */
   background-color: #fff;
-  margin: 4px;
+  margin: 5px;
   transition: transform 0.3s ease;
 }
 
-/* When Navbar is Active (Menu Open) */
+/* Hamburger menu active state */
 .navbar.active .hamburger div:nth-child(1) {
-  transform: rotate(45deg) translate(9px, 6px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .navbar.active .hamburger div:nth-child(2) {
@@ -75,17 +94,20 @@
 }
 
 .navbar.active .hamburger div:nth-child(3) {
-  transform: rotate(-45deg) translate(9px, -6px);
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Navbar links display when hamburger menu is active */
 .navbar.active ul {
   display: flex;
 }
 
-/* Responsive Styles */
+/* Responsive styles */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
+    height: auto; /* Adjust height for mobile */
+    flex-direction: column; /* Stack elements vertically */
   }
 
   .navbar ul {
@@ -93,18 +115,23 @@
     align-items: center;
     background-color: #333;
     position: absolute;
-    top: 60px;
+    top: 100px; /* Adjust top position for mobile */
     left: 0;
     width: 100%;
     padding: 1rem;
     display: none; /* Hidden by default */
+    height: auto; /* Adjust height for mobile */
   }
 
   .navbar ul li {
-    margin: 1rem 0;
+    margin: 1rem 0; /* Space between items for mobile */
   }
 
   .navbar .hamburger {
     display: flex;
+  }
+
+  .navbar.active ul {
+    display: flex; /* Show menu when active */
   }
 }

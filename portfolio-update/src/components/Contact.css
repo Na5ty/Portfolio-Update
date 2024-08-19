@@ -1,3 +1,5 @@
+/* contact.css */
+
 .contact-container {
   display: flex;
   justify-content: center;
@@ -9,7 +11,6 @@
 }
 
 .contact-card {
-  margin-top: 190px;
   background: linear-gradient(135deg, #2a2a2a, #333333);
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
